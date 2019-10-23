@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, equal,dec, add, minus, div, mult,clean,back,log,sin,cos,tan,ln,exp,pi;
+    private Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, equal,dec, add, minus, div, mult,clean,back,log,sin,cos,tan,ln,exp,pi,ex;
     private TextView t1, t2;
     public String a, b, u = "",si="",con="", e = "Math error";
     char ch;
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ex = findViewById(R.id.exit);
         b0 = findViewById(R.id.button0);
         b1 = findViewById(R.id.button1);
         b2 = findViewById(R.id.button2);
@@ -49,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         t1 = findViewById(R.id.textView1);
         t2 = findViewById(R.id.textView2);
 
+        ex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
